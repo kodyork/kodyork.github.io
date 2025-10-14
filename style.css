@@ -25,3 +25,22 @@ nav a {
   color: #333;
   font-weight: bold;
 }
+/* --- ここから追加 --- */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.photo {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 300px;
+}
+
+.photo img {
+  max-width: 100%;
+  height: auto;
+}
