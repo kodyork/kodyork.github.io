@@ -1,0 +1,27 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+nav ul {
+  background: #f4f4f4;
+  padding: 15px;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
