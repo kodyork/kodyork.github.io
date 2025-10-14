@@ -44,3 +44,24 @@ nav a {
   max-width: 100%;
   height: auto;
 }
+/* --- ここからブログ用デザインを追加 --- */
+.post, .post-list {
+  text-align: left;
+  max-width: 680px;
+  margin: 30px auto;
+}
+
+.post-list {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.post-list h2 a {
+  text-decoration: none;
+  color: #333;
+}
+
+.post-date {
+  color: #888;
+  font-size: 0.9em;
+}
