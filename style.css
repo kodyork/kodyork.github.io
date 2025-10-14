@@ -309,3 +309,24 @@ footer {
 .post-list-meta .post-date {
   margin-left: 10px;
 }
+/* --- 404ページのデザイン --- */
+.error-page-content {
+  text-align: center;
+  padding: 80px 20px;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-page-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.error-page-content p {
+  font-size: 1.1em;
+  margin-bottom: 40px;
+  color: #666;
+}
