@@ -182,3 +182,107 @@ footer {
 .profile-text li {
     margin-bottom: 10px;
 }
+/* --- ここからポートフォリオページ用のデザインを追加 --- */
+
+.category-filters {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.filter-button {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 8px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.filter-button.active,
+.filter-button:hover {
+  background-color: #4A5C52;
+  color: white;
+  border-color: #4A5C52;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.grid-item {
+  overflow: hidden;
+  aspect-ratio: 1 / 1; /* 正方形にする */
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+  transform: scale(1.1);
+}
+
+/* --- 写真詳細ページのデザイン --- */
+
+.photo-detail {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.photo-detail img {
+  flex: 2; /* 画像の幅の割合 */
+  max-width: 65%;
+  height: auto;
+}
+
+.photo-info {
+  flex: 1; /* テキストの幅の割合 */
+}
+
+.photo-info h1 {
+    margin-top:0;
+}
+
+.photo-info table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.photo-info th, .photo-info td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.photo-info th {
+  width: 30%;
+  font-weight: bold;
+  background-color: #f9f9f9;
+}
+
+.back-to-gallery {
+  display: inline-block;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+/* スマホ表示用の設定 */
+@media (max-width: 768px) {
+  .photo-detail {
+    flex-direction: column;
+  }
+  .photo-detail img {
+    max-width: 100%;
+  }
+}
