@@ -286,3 +286,26 @@ footer {
     max-width: 100%;
   }
 }
+/* --- ここからブログカテゴリ用のデザインを追加 --- */
+
+.post-category {
+  margin-bottom: 15px;
+}
+
+.post-category, .post-category-list {
+  display: inline-block;
+  background-color: #4A5C52;
+  color: white;
+  padding: 4px 12px;
+  font-size: 0.8em;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.post-list-meta {
+  margin-bottom: 8px;
+}
+
+.post-list-meta .post-date {
+  margin-left: 10px;
+}
