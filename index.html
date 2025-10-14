@@ -5,22 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kodyork's Website</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <h1>Kodyork's Website</h1>
-    <p>ご訪問くださりありがとうございます。kodyorkのウェブサイトです。</p>
+  <header class="main-header">
+    <div class="site-title"><a href="index.html">Kodyork's Website</a></div>
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="about.html">プロフィール (About)</a></li>
-      <li><a href="portfolio.html">写真 (Portfolio)</a></li>
-      <li><a href="blog.html">ブログ (Blog)</a></li>
-      <li><a href="contact.html">お問い合わせ (Contact)</a></li>
-    </ul>
-  </nav>
+  <section class="hero">
+    <p class="hero-caption">hint of snow in the direction of the west, a sandcastle collapses</p>
+  </section>
+
+  <main>
+    <section class="latest-post">
+      <h2>Latest Post</h2>
+      <div class="post-summary">
+        <h3><a href="post1.html">初投稿</a></h3>
+        <p class="post-date">2025年10月14日</p>
+        <p>こんにちは。 ... <a href="post1.html" class="read-more">続きを読む</a></p>
+      </div>
+      <div class="button-wrapper">
+        <a href="blog.html" class="button">ブログ一覧を見る</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kodyork's Website</p>
+  </footer>
 
 </body>
 </html>
