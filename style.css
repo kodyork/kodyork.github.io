@@ -56,7 +56,8 @@ main {
   background-position: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* ← これに変更 */
+  padding-top: 10vh;      /* ← これを追加 */
   text-align: center;
   color: white;
 }
