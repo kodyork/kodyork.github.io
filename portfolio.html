@@ -29,25 +29,27 @@
     </div>
 
     <div class="category-filters">
-      <button class="filter-button active">すべて</button>
-      <button class="filter-button">人物</button>
-      <button class="filter-button">風景</button>
-      <button class="filter-button">料理</button>
+      <button class="filter-button active" data-filter="all">すべて</button>
+      <button class="filter-button" data-filter="人物">人物</button>
+      <button class="filter-button" data-filter="風景">風景</button>
+      <button class="filter-button" data-filter="料理">料理</button>
     </div>
 
     <div class="portfolio-grid">
-      <a href="photo-ccc.html" class="grid-item"><img src="CCC.png" alt="楽しい時間でした"></a>
-      <a href="photo-fff.html" class="grid-item"><img src="FFF.png" alt="友人らと食べに"></a>
-      <a href="photo-eee.html" class="grid-item"><img src="EEE.png" alt="凱旋門風"></a>
-      <a href="photo-ddd.html" class="grid-item"><img src="DDD.png" alt="ピンクガネーシャ"></a>
-      <a href="photo-bbb.html" class="grid-item"><img src="BBB.png" alt="夕方に撮った写真"></a>
-      <a href="photo-aaa.html" class="grid-item"><img src="AAA.png" alt="夜に何となく撮りました、ぴんぼけ"></a>
+      <a href="photo-ccc.html" class="grid-item" data-category="人物"><img src="CCC.png" alt="楽しい時間でした"></a>
+      <a href="photo-fff.html" class="grid-item" data-category="料理"><img src="FFF.png" alt="友人らと食べに"></a>
+      <a href="photo-eee.html" class="grid-item" data-category="人物"><img src="EEE.png" alt="凱旋門風"></a>
+      <a href="photo-ddd.html" class="grid-item" data-category="人物"><img src="DDD.png" alt="ピンクガネーシャ"></a>
+      <a href="photo-bbb.html" class="grid-item" data-category="風景"><img src="BBB.png" alt="夕方に撮った写真"></a>
+      <a href="photo-aaa.html" class="grid-item" data-category="人物"><img src="AAA.png" alt="夜に何となく撮りました、ぴんぼけ"></a>
     </div>
   </main>
 
   <footer>
     <p>&copy; 2025 kodyork</p>
   </footer>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
