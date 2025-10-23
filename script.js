@@ -22,24 +22,38 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-/* --- ここから哲学クイズ用のコードを追加 --- */
+/* --- 哲学クイズのコード --- */
 
-// 哲学クイズのページかどうかを判定
-const checkAnswersButton = document.getElementById('check-answers-btn');
-if (checkAnswersButton) {
+// 哲学クイズのページ（philosophy.html）でのみ実行
+if (document.getElementById('check-answers-btn')) {
+  initializeQuiz();
+}
 
-  // 正解のデータ（キー: 質問ID, 値: 正しい選択肢のvalue）
+function initializeQuiz() {
+  const checkAnswersButton = document.getElementById('check-answers-btn');
+
+  // 正解のデータ（問1〜20）
   const correctAnswers = {
     q1: '3',
-    q2: '1',
-    q3: '3',
-    q4: '4',
-    q5: '2',
-    q6: '3',
-    q7: '3',
-    q8: '3',
-    q9: '4',
-    q10: '1'
+    q2: '3',
+    q3: '4',
+    q4: '3',
+    q5: '1',
+    q6: '2',
+    q7: '2',
+    q8: '4',
+    q9: '1',
+    q10: '1',
+    q11: '3',
+    q12: '1',
+    q13: '4',
+    q14: '3',
+    q15: '2',
+    q16: '2',
+    q17: '1',
+    q18: '2',
+    q19: '2',
+    q20: '3'
   };
 
   // 「採点する」ボタンがクリックされた時の処理
