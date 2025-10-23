@@ -391,7 +391,7 @@ footer {
 /* --- 勉強部屋ハブのデザイン --- */
 .hub-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 40px;
 }
