@@ -351,9 +351,13 @@ footer {
   color: #4A5C52;
 }
 
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .quiz-options label {
-  display: block;
-  margin-bottom: 15px;
   cursor: pointer;
 }
 
