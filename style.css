@@ -387,3 +387,39 @@ footer {
   background-color: #fff0f0;
   border-color: #f5b5b5;
 }
+
+/* --- 勉強部屋ハブのデザイン --- */
+.hub-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.hub-link {
+  display: block;
+  padding: 30px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.hub-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+}
+
+.hub-link h2 {
+  margin-top: 0;
+  color: #4A5C52;
+}
+
+/* スマホ表示用の設定 */
+@media (max-width: 768px) {
+  .hub-container {
+    grid-template-columns: 1fr;
+  }
+}
