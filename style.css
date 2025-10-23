@@ -330,3 +330,60 @@ footer {
   margin-bottom: 40px;
   color: #666;
 }
+/* --- ここから哲学クイズのデザイン --- */
+
+.quiz-container {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.quiz-question {
+  background-color: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.quiz-question h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+  color: #4A5C52;
+}
+
+.quiz-options label {
+  display: block;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.quiz-options input {
+  margin-right: 10px;
+}
+
+.quiz-answer {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 0.95em;
+}
+
+#quiz-result h2 {
+  text-align: center;
+  color: #4A5C52;
+  font-size: 2em;
+  margin: 40px 0;
+}
+
+/* 正解・不正解のスタイル */
+.quiz-question.correct {
+  background-color: #f0fff4;
+  border-color: #a3d9b8;
+}
+
+.quiz-question.incorrect {
+  background-color: #fff0f0;
+  border-color: #f5b5b5;
+}
