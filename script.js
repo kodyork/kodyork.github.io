@@ -22,14 +22,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  /* --- 2. クイズの採点機能 --- */
-  const checkAnswersButton = document.getElementById('check-answers-btn');
-  if (checkAnswersButton) {
+  /* --- 2. クイズの個別採点機能 --- */
+  const quizContainer = document.querySelector('.quiz-container');
+
+  if (quizContainer) { // クイズページかどうかを判定
+
     let correctAnswers = {};
     const pageTitleElement = document.querySelector('head title');
     const pageTitle = pageTitleElement ? pageTitleElement.innerText : '';
 
-    // ページタイトルに基づいて正解データを設定
+    // ページタイトルに基づいて正解データを読み込む
     if (pageTitle.includes('哲学クイズ')) {
       correctAnswers = { /* ... 哲学クイズの答え ... */
         q1: '3', q2: '3', q3: '4', q4: '3', q5: '1', q6: '2', q7: '2', q8: '4', q9: '1', q10: '1',
@@ -66,45 +68,53 @@ document.addEventListener('DOMContentLoaded', function() {
         q126: '1'
       };
     } else if (pageTitle.includes('センター試験 文法語法クイズ 1998-2001')) { // ★ ここのデータを修正
-      correctAnswers = { // 1998-2001 (q1-q47 sequential)
+      correctAnswers = { // 1998-2001 (Sequential q1-q47)
         q1: '3', q2: '2', q3: '3', q4: '1', q5: '3', q6: '2', q7: '3', q8: '1', q9: '1', q10: '2',
         q11: '1', q12: '2', q13: '3', q14: '2', q15: '1', q16: '2', q17: '1', q18: '1', q19: '3', q20: '3',
         q21: '1', q22: '4', q23: '3', q24: '2', q25: '1', q26: '4', q27: '1', q28: '1', q29: '1', q30: '3',
-        q31: '2', q32: '2', q33: '1', q34: '4', q35: '1', q36: '2', q37: '2', // New 2000 Q11 (shame) is now q37
+        q31: '2', q32: '2', q33: '1', q34: '4', q35: '1', q36: '2', q37: '2', // New 2000 Q11 (shame)
         q38: '2', q39: '4', q40: '1', q41: '3', q42: '2', q43: '3', q44: '4', // Original 2001 Q1-7
         q45: '1', q46: '3', q47: '1' // New 2001 Q8, Q9, Q10
       };
     }
 
+    // 個別チェックボタンのイベントリスナーを設定 (イベント委任)
+    quizContainer.addEventListener('click', function(event) {
+      if (event.target.classList.contains('check-single-answer-btn')) {
+        const checkButton = event.target;
+        const questionElement = checkButton.closest('.quiz-question');
+        if (!questionElement) return;
 
-    // 「採点する」ボタンにイベントを登録 (正解データがあれば)
-    if (Object.keys(correctAnswers).length > 0) {
-      checkAnswersButton.addEventListener('click', () => {
-        let score = 0;
-        const totalQuestions = Object.keys(correctAnswers).length;
-        const answerElements = document.querySelectorAll('.quiz-answer');
-        answerElements.forEach(el => { el.style.display = 'block'; });
+        const questionId = questionElement.id;
+        const selectedOption = questionElement.querySelector(`input[name="${questionId}"]:checked`);
+        const answerElement = questionElement.querySelector('.quiz-answer');
+        const options = questionElement.querySelectorAll(`input[name="${questionId}"]`);
 
-        for (const questionId in correctAnswers) {
-          const questionElement = document.getElementById(questionId);
-          const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
-          if (!questionElement) continue;
-          questionElement.classList.remove('correct', 'incorrect');
-          if (selectedOption) {
-            if (selectedOption.value === correctAnswers[questionId]) {
-              score++;
-              questionElement.classList.add('correct');
-            } else {
-              questionElement.classList.add('incorrect');
-            }
-          } else {
-            questionElement.classList.add('incorrect');
-          }
+        // 解答が選択されているか確認
+        if (!selectedOption) {
+          alert('Please select an answer first.'); // アラートを表示
+          return; // 処理を中断
         }
-        const resultElement = document.getElementById('quiz-result');
-        resultElement.innerHTML = `<h2>結果: ${totalQuestions}問中 ${score}問 正解です！</h2>`;
-        resultElement.scrollIntoView({ behavior: 'smooth' });
-      });
-    }
+
+        // 正誤判定
+        questionElement.classList.remove('correct', 'incorrect'); // 前回の結果をリセット
+        if (selectedOption.value === correctAnswers[questionId]) {
+          questionElement.classList.add('correct');
+        } else {
+          questionElement.classList.add('incorrect');
+        }
+
+        // 解説を表示
+        if (answerElement) {
+          answerElement.style.display = 'block';
+        }
+
+        // 選択肢とボタンを無効化
+        options.forEach(option => option.disabled = true);
+        checkButton.disabled = true;
+        checkButton.textContent = 'Checked'; // ボタンのテキストを変更 (任意)
+      }
+    });
   }
+
 }); // End of DOMContentLoaded
