@@ -464,3 +464,138 @@ footer {
 .static-options li {
   margin-bottom: 10px;
 }
+/* --- ここから新しいトップページのデザイン --- */
+
+/* Hero Section Refinements */
+.hero {
+  display: flex; /* Flexboxを使って内容を中央揃え */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative; /* オーバーレイの基準点 */
+  min-height: 60vh; /* 少し高さを出す */
+}
+
+.hero::before { /* 画像の上に半透明の黒いオーバーレイを追加 */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* 黒の30%透明 */
+  z-index: 1; /* テキストの下 */
+}
+
+.hero-content {
+  position: relative; /* テキストをオーバーレイの上に表示 */
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.2em;
+  color: #eee; /* 明るい色 */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.hero-caption {
+  font-size: 1.8em; /* 少し大きく */
+  color: #fff; /* 白 */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* 文字に影をつけて読みやすく */
+  margin-bottom: 30px; /* ボタンとの間隔 */
+}
+
+.hero-button {
+  background-color: #fff; /* 白背景 */
+  color: #4A5C52; /* 文字はテーマカラー */
+  font-weight: bold;
+  padding: 12px 30px;
+  border: 2px solid #fff;
+}
+.hero-button:hover {
+  background-color: transparent; /* 透明背景 */
+  color: #fff; /* 文字は白 */
+}
+
+/* Main content padding */
+.home-main {
+  padding: 40px 0; /* 上下の余白 */
+}
+
+/* Common style for home sections */
+.home-section {
+  max-width: 900px; /* コンテンツ幅を少し広げる */
+  margin: 0 auto 60px auto; /* 中央揃えと下の余白 */
+  padding: 0 20px; /* 左右の余白 */
+  text-align: center; /* 基本的に中央揃え */
+}
+
+.home-section h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  display: inline-block; /* 下線が文字幅に合うように */
+}
+
+/* About Snippet Specific */
+.about-snippet p {
+  text-align: left; /* 本文は左揃え */
+  line-height: 1.8;
+  max-width: 700px; /* 本文の幅を少し狭める */
+  margin: 0 auto 30px auto; /* 中央揃え */
+}
+
+/* Portfolio Preview Grid */
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3列グリッド */
+  gap: 15px; /* アイテム間の隙間 */
+  margin-bottom: 30px;
+}
+
+.preview-item {
+  overflow: hidden;
+  aspect-ratio: 1 / 1; /* 正方形 */
+  border-radius: 5px; /* 少し角を丸める */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.preview-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.preview-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Latest Post on Home */
+.latest-post-home .post-summary {
+  background-color: #f9f9f9; /* 背景色をつける */
+  padding: 25px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  text-align: left; /* テキストは左揃え */
+}
+.latest-post-home .post-summary h3 {
+  margin-top: 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .hero-caption {
+    font-size: 1.5em;
+  }
+  .preview-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* スマホでは自動調整 */
+  }
+  .home-section h2 {
+    font-size: 1.8em;
+  }
+}
