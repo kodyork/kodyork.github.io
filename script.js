@@ -115,7 +115,8 @@ document.addEventListener('DOMContentLoaded', function() {
              questionElement.classList.remove('correct', 'incorrect');
 
              // 正誤判定してクラスを追加
-             if (selectedOption.value === correctAnswers[questionId]) {
+             // correctAnswers[questionId] が存在するか念のため確認
+             if (correctAnswers.hasOwnProperty(questionId) && selectedOption.value === correctAnswers[questionId]) {
                questionElement.classList.add('correct'); // 正解ならcorrectクラス
              } else {
                questionElement.classList.add('incorrect'); // 不正解ならincorrectクラス
@@ -132,6 +133,8 @@ document.addEventListener('DOMContentLoaded', function() {
              checkButton.textContent = 'Checked'; // ボタンのテキスト変更
            }
          });
+    } else {
+        console.error("Correct answers not loaded for this page title:", pageTitle); // デバッグ用
     }
   } // End if (quizContainer)
 
