@@ -552,7 +552,7 @@ footer {
 /* Portfolio Preview Grid */
 .preview-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3列グリッド */
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 15px; /* アイテム間の隙間 */
   margin-bottom: 30px;
 }
