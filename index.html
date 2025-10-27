@@ -8,40 +8,67 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
-  <meta name="description" content="Kodyorkの公式ウェブサイトです。写真ポートフォリオや、英語・中国語の学習法に関するブログを発信しています。">
-  <link rel="icon" type="image/png" href="favicon1.png">
-<link rel="apple-touch-icon" href="favicon1.png">
-</head>
+  <meta name="description" content="Kodyorkの公式ウェブサイトです。写真ポートフォリオや、英語・中国語の学習法に関するブログ、哲学や国際問題の学習コンテンツを発信しています。"> <link rel="icon" type="image/png" href="favicon1.png">
+  <link rel="apple-touch-icon" href="favicon1.png">
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBT35WHGHZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-EBT35WHGHZ');
-</script>
-<body>
+    gtag('config', 'G-EBT35WHGHZ');
+  </script>
+  </head> <body>
 
-<header class="main-header">
-  <div class="site-title"><a href="index.html">Kodyork's Website</a></div>
-  <nav>
-    <ul>
-      <li><a href="about.html">About</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="study.html">勉強部屋</a></li>
-      <li><a href="eigo-hub.html">英語学習</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <header class="main-header">
+    <div class="site-title"><a href="index.html">Kodyork's Website</a></div>
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="study.html">勉強部屋</a></li>
+        <li><a href="eigo-hub.html">英語学習</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <section class="hero">
-    <p class="hero-caption">hint of snow in the direction of the west, a sandcastle collapses</p>
+    <div class="hero-content">
+      <p class="hero-subtitle">慶應/北京大卒 | 英語・中国語学習 | 写真</p>
+      <p class="hero-caption">hint of snow in the direction of the west, a sandcastle collapses</p>
+      <a href="portfolio.html" class="button hero-button">View Portfolio</a>
+    </div>
   </section>
 
-  <main>
-    <section class="latest-post">
+  <main class="home-main">
+
+    <section class="home-section about-snippet">
+      <h2>About Me</h2>
+      <p>
+        慶應義塾大学経済学部を卒業後、中国北京大学国際関係学院にて修士号を取得。専門は国際政治経済学と比較政治。英語・中国語の指導経験も豊富です。<br>
+        趣味は写真撮影と俳句。このサイトでは、学びや日常で感じたこと、撮影した写真などを発信しています。
+      </p>
+      <div class="button-wrapper">
+        <a href="about.html" class="button">More About Me</a>
+      </div>
+    </section>
+
+    <section class="home-section portfolio-preview">
+      <h2>Portfolio Preview</h2>
+      <div class="preview-grid">
+        <a href="photo-ccc.html" class="preview-item"><img src="CCC.png" alt="楽しい時間でした"></a>
+        <a href="photo-fff.html" class="preview-item"><img src="FFF.png" alt="友人らと食べに"></a>
+        <a href="photo-eee.html" class="preview-item"><img src="EEE.png" alt="凱旋門風"></a>
+        </div>
+      <div class="button-wrapper">
+        <a href="portfolio.html" class="button">View All Photos</a>
+      </div>
+    </section>
+
+    <section class="home-section latest-post-home">
       <h2>Latest Post</h2>
       <div class="post-summary">
         <h3><a href="post2.html">英単語学習私論</a></h3>
@@ -52,11 +79,12 @@
         <a href="blog.html" class="button">ブログ一覧を見る</a>
       </div>
     </section>
+
   </main>
 
   <footer>
     <p>&copy; 2025 kodyork</p>
   </footer>
 
-</body>
+  </body>
 </html>
