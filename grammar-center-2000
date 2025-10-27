@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>センター試験 文法語法クイズ 2000 | Kodyork's Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <meta name="description" content="大学入試センター試験(本試験)の文法語法問題 2000年度のクイズです。">
+  <link rel="icon" type="image/png" href="favicon1.png">
+  <link rel="apple-touch-icon" href="favicon1.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBT35WHGHZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EBT35WHGHZ');
+  </script>
+  </head>
+<body>
+
+  <header class="main-header">
+    <div class="site-title"><a href="index.html">Kodyork's Website</a></div>
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="study.html">勉強部屋</a></li>
+        <li><a href="eigo-hub.html">英語学習</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-title">
+      <h1>センター試験 文法語法クイズ 2000</h1>
+      <p>空欄に入れるのに最も適当なものを一つ選べ。(全11問)</p>
+    </div>
+
+    <div class="quiz-container">
+
+      <h2 class="quiz-section-title">2000年度 (本試験)</h2>
+
+      <div class="quiz-question" id="q1">
+        <h3>問1</h3>
+        <p>"What's that song you're listening to?" "You don't know? It's 'Yesterday' by the Beatles. You [ 155 ] it before!"</p>
+        <div class="quiz-options">
+          <label><input type="radio" name="q1" value="1"> hadn't heard</label>
+          <label><input type="radio" name="q1" value="2"> might hear</label>
+          <label><input type="radio" name="q1" value="3"> must've heard</label>
+          <label><input type="radio" name="q1" value="4"> shouldn't hear</label>
+        </div>
+        <div class="button-wrapper single-check-wrapper"> <button class="check-single-answer-btn button">Check Answer</button> </div>
+        <div class="quiz-answer" style="display: none;"> <p><strong>答え: 3. must've heard</strong><br>must have done で「〜したに違いない」。過去の出来事に対する強い肯定の推量。「（有名な曲だから）以前に聞いたことがあるに違いない」。</p> </div>
+      </div>
+
+      <div class="quiz-question" id="q2">
+        <h3>問2</h3>
+        <p>Bill had to leave his family [ 156 ] when he went abroad to work.</p>
+        <div class="quiz-options">
+          <label><input type="radio" name="q2" value="1"> back</label>
+          <label><input type="radio" name="q2" value="2"> behind</label>
+          <label><input type="radio" name="q2" value="3"> off</label>
+          <label><input type="radio" name="q2" value="4"> over</label>
+        </div>
+        <div class="button-wrapper single-check-wrapper"> <button class="check-single-answer-btn button">Check Answer</button> </div>
+        <div class="quiz-answer" style="display: none;"> <p><strong>答え: 2. behind</strong><br>leave ~ behind で「〜を（後に）残していく」。家族を国に残して海外へ行ったという文脈。</p> </div>
+      </div>
+
+      <div class="quiz-question" id="q3">
+        <h3>問3</h3>
+        <p>“May I speak to Mr. Hall, Please?" "I'm sorry, he's not here at the moment. Can I take a [ 157 ] ?"</p>
+        <div class="quiz-options">
+          <label><input type="radio" name="q3" value="1"> memo</label>
+          <label><input type="radio" name="q3" value="2"> message</label>
+          <label><input type="radio" name="q3" value="3"> note</label>
+          <label><input type="radio" name="q3" value="4"> record</label>
+        </div>
+        <div class="button-wrapper single-check-wrapper"> <button class="check-single-answer-btn button">Check Answer</button> </div>
+        <div class="quiz-answer" style="display: none;"> <p><strong>答え: 2. message</strong><br>take a message で「伝言を預かる」。電話応対の決まり文句。</p> </div>
+      </div>
+
+      <div class="quiz-question" id="q4">
+        <h3>問4</h3>
+        <p>These two plants are different in almost every way. The only feature they have [ 158 ] is their need for dry soil.</p>
+        <div class="quiz-options">
+          <label><input type="radio" name="q4" value="1"> by chance</label>
+          <label><input type="radio" name="q4" value="2"> by nature</label>
+          <label><input type="radio" name="q4" value="3"> in common</label>
+          <label><input type="radio" name="q4" value="4"> in turn</label>
+        </div>
+        <div class="button-wrapper single-check-wrapper"> <button class="check-single-answer-btn button">Check Answer</button> </div>
+        <div class="quiz-answer" style="display: none;"> <p><strong>答え: 3. in common</strong><br>have ~ in common で「〜を共通点として持つ」。</p> </div>
+      </div>
+
+      <div class="quiz-question" id="q5">
+        <h3>問5</h3>
+        <p>Paul left his book at home again. He's so [ 159 ].</p>
+        <div class="quiz-options">
+          <label><input type="radio" name="q5" value="1"> forgetful</label>
+          <label><input type="radio" name="q5" value="2"> forgettable</label>
+          <label><input type="radio" name="q5" value="3"> forgetting</label>
+          <label><input type="radio" name="q5" value="4"> forgotten</label>
+        </div>
+        <div class="button-wrapper single-check-wrapper"> <button class="check-single-answer-btn button">Check Answer</button> </div>
+        <div class="quiz-answer" style="display: none;"> <p><strong>答え: 1. forgetful</strong><br>forgetful は「忘れっぽい」という人の性質を表す形容詞。forgettable は「忘れられやすい」。</p> </div>
+      </div>
+
+      <div class="quiz-question" id="q6">
+        <h3>問6</h3>
+        <p>Sarah is always able to answer the teacher's questions. She is such a [ 160 ] girl.</p>
+        <div class="quiz-options">
+          <label><input type="radio" name="q6" value="1"> dependent</label>
+          <label><input type="radio" name="q6" value="2"> lazy</label>
+          <label><input type="radio" name="q6" value="3"> shy</label>
+          <label><input type="radio" name="q6" value="4"> smart</label>
+        </div>
+        <div class="button-wrapper single-check-wrapper"> <button class="check-single-answer-btn button">Check Answer</button> </div>
+        <div class="quiz-answer" style="display: none;"> <p><strong>答え: 4. smart</strong><br>smart は「頭の良い、賢い」。質問にいつも答えられることから判断できる。</p> </div>
+      </div>
+
+      <div class="quiz-question" id="q7">
+        <h3>問7</h3>
+        <p>“Haven't you finished that report yet?" "[ 161 ] me a few more minutes and I'll get it done."</p>
+        <div class="quiz-options">
+          <label><input type="radio" name="q7" value="1"> Give</label>
+          <label><input type="radio" name="q7" value="2"> Share</label>
+          <label><input type="radio" name="q7" value="3"> Take</label>
+          <label><input type="radio" name="q7" value="4"> Wait</label>
+        </div>
+        <div class="button-wrapper single-check-wrapper"> <button class="check-single-answer-btn button">Check Answer</button> </div>
+        <div class="quiz-answer" style="display: none;"> <p><strong>答え: 1. Give</strong><br>Give me a few more minutes. で「あと数分ください」。命令文。</p> </div>
+      </div>
+
+      <div class="quiz-question" id="q8">
+        <h3>問8</h3>
+        <p>“Our trip to Tokyo was fun, wasn't it?" "Yes, it was great! I'm really looking forward [ 162 ] there again sometime."</p>
+        <div class="quiz-options">
+          <label><input type="radio" name="q8" value="1"> go</label>
+          <label><input type="radio" name="q8" value="2"> going</label>
+          <label><input type="radio" name="q8" value="3"> to going</label> <label><input type="radio" name="q8" value="4"> to go</label> </div>
+        <div class="button-wrapper single-check-wrapper"> <button class="check-single-answer-btn button">Check Answer</button> </div>
+        <div class="quiz-answer" style="display: none;"> <p><strong>答え: 3. to going</strong><br>look forward to ~ing で「〜するのを楽しみに待つ」。この to は前置詞。</p> </div>
+      </div>
+
+      <div class="quiz-question" id="q9">
+        <h3>問9</h3>
+        <p>“Is that Italian restaurant next to the bookstore new?" "No, I think [ 163 ] for more than a year now."</p>
+        <div class="quiz-options">
+          <label><input type="radio" name="q9" value="1"> it's been open</label>
+          <label><input type="radio" name="q9" value="2"> it's open</label>
+          <label><input type="radio" name="q9" value="3"> it's opened</label>
+          <label><input type="radio" name="q9" value="4"> it was open</label>
+        </div>
+        <div class="button-wrapper single-check-wrapper"> <button class="check-single-answer-btn button">Check Answer</button> </div>
+        <div class="quiz-answer" style="display: none;"> <p><strong>答え: 1. it's been open</strong><br>for more than a year (1年以上) という期間があるので、現在完了形。「開店してから1年以上になる」。open はここでは形容詞。</p> </div>
+      </div>
+
+      <div class="quiz-question" id="q10">
+        <h3>問10</h3>
+        <p>“May I use your phone?" "Sure, [ 164 ]. I'm not expecting any calls right now."</p>
+        <div class="quiz-options">
+          <label><input type="radio" name="q10" value="1"> come about</label>
+          <label><input type="radio" name="q10" value="2"> go ahead</label>
+          <label><input type="radio" name="q10" value="3"> put it on</label>
+          <label><input type="radio" name="q10" value="4"> take it up</label>
+        </div>
+        <div class="button-wrapper single-check-wrapper"> <button class="check-single-answer-btn button">Check Answer</button> </div>
+        <div class="quiz-answer" style="display: none;"> <p><strong>答え: 2. go ahead</strong><br>Go ahead. は許可を与えるときの「どうぞ」。</p> </div>
+      </div>
+
+      <div class="quiz-question" id="q11">
+        <h3>問11</h3>
+        <p>It's a [ 165 ] your wife couldn't come. I really wanted to meet her.</p>
+        <div class="quiz-options">
+          <label><input type="radio" name="q11" value="1"> harm</label>
+          <label><input type="radio" name="q11" value="2"> shame</label>
+          <label><input type="radio" name="q11" value="3"> sorrow</label>
+          <label><input type="radio" name="q11" value="4"> trouble</label>
+        </div>
+        <div class="button-wrapper single-check-wrapper"> <button class="check-single-answer-btn button">Check Answer</button> </div>
+        <div class="quiz-answer" style="display: none;"> <p><strong>答え: 2. shame</strong><br>It's a shame (that) ... で「…なのは残念だ」。= It's a pity (that) ...。</p> </div>
+      </div>
+
+    </div> <br>
+    <p style="text-align: center;"><a href="eigo-grammar-hub.html">← 英文法一覧へ戻る</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 kodyork</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
