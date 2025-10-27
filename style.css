@@ -434,3 +434,33 @@ footer {
   padding: 15px 20px;
   margin-top: 20px;
 }
+
+/* --- 英文法（センター試験）ページのデザイン --- */
+.quiz-question-static {
+  background-color: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+}
+
+.quiz-question-static h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+  color: #4A5C52;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 10px;
+}
+
+.quiz-question-static p {
+  margin-bottom: 20px;
+}
+
+.static-options {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+.static-options li {
+  margin-bottom: 10px;
+}
