@@ -599,3 +599,26 @@ footer {
     font-size: 1.8em;
   }
 }
+/* --- ここから穴埋め問題（クリック表示）のデザイン --- */
+
+.blank-space {
+  cursor: pointer;
+  color: #007bff; /* クリック可能であることを示す青色 */
+  font-weight: bold;
+  border-bottom: 1px dotted #007bff; /* 下線を追加 */
+  display: inline-block; /* 下線が適切に表示されるように */
+  padding: 0 5px; /* 少し余白 */
+}
+
+.blank-space.revealed { /* クリック後のスタイル */
+  cursor: default;
+  color: inherit; /* 通常の文字色に戻す */
+  font-weight: normal; /* 太字を解除 */
+  border-bottom: none; /* 下線を削除 */
+  padding: 0;
+}
+
+.answer-text {
+  color: red; /* 答えは赤字 */
+  font-weight: bold;
+}
