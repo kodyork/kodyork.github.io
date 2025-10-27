@@ -470,7 +470,6 @@ footer {
 .hero {
   display: flex; /* Flexboxを使って内容を中央揃え */
   justify-content: center;
-  align-items: center;
   text-align: center;
   position: relative; /* オーバーレイの基準点 */
   min-height: 60vh; /* 少し高さを出す */
@@ -491,6 +490,7 @@ footer {
   position: relative; /* テキストをオーバーレイの上に表示 */
   z-index: 2;
   padding: 20px;
+  padding-top: 5vh;
 }
 
 .hero-subtitle {
