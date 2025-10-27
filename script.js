@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const checkAnswersButton = document.getElementById('check-answers-btn');
   if (checkAnswersButton) {
     let correctAnswers = {};
-    const pageTitleElement = document.querySelector('head title'); // title要素を取得
-    const pageTitle = pageTitleElement ? pageTitleElement.innerText : ''; // 要素があればテキスト取得
+    const pageTitleElement = document.querySelector('head title');
+    const pageTitle = pageTitleElement ? pageTitleElement.innerText : '';
 
     // ページタイトルに基づいて正解データを設定
     if (pageTitle.includes('哲学クイズ')) {
@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
         q1: '4', q2: '1', q3: '2', q4: '2', q5: '3', q6: '1', q7: '3', q8: '2', q9: '2', q10: '1',
         q11: '3', q12: '2', q13: '2', q14: '1', q15: '2'
       };
-    } else if (pageTitle.includes('センター試験 文法語法クイズ')) { // 新しいクイズのタイトル
-      correctAnswers = {
+    } else if (pageTitle.includes('センター試験 文法語法クイズ 1990-1993')) {
+       correctAnswers = { // 1990-1993 (q1-q65)
         q1: '2', q2: '3', q3: '2', q4: '1', q5: '3', q6: '2', q7: '3', q8: '2', q9: '1', q10: '1',
         q11: '1', q12: '2', q13: '1', q14: '2', q15: '2', q16: '4', q17: '4', q18: '2', q19: '1', q20: '1',
         q21: '4', q22: '2', q23: '3', q24: '1', q25: '1', q26: '3', q27: '4', q28: '3', q29: '2', q30: '3',
@@ -55,7 +55,18 @@ document.addEventListener('DOMContentLoaded', function() {
         q51: '1', q52: '3', q53: '3', q54: '3', q55: '2', q56: '3', q57: '4', q58: '2', q59: '2', q60: '1',
         q61: '3', q62: '1', q63: '4', q64: '3', q65: '3'
       };
+    } else if (pageTitle.includes('センター試験 文法語法クイズ 1994-1997')) { // ★ 新しく追加
+      correctAnswers = { // 1994-1997 (q66-q129 -> 実際は q126まで)
+        q66: '4', q67: '1', q68: '3', q69: '2', q70: '4', q71: '3', q72: '2', q73: '3', q74: '3', q75: '4',
+        q76: '2', q77: '2', q78: '1', q79: '4', q80: '4', q81: '2', q82: '2', q83: '3', q84: '3', q85: '4',
+        q86: '4', q87: '3', q88: '4', q89: '3', q90: '4', q91: '2', q92: '3', q93: '3', q94: '2', q95: '3',
+        q96: '2', q97: '3', q98: '2', q99: '4', q100: '1', q101: '3', q102: '3', q103: '2', q104: '2', q105: '3',
+        q106: '2', q107: '4', q108: '2', q109: '2', q110: '1', q111: '2', q112: '4', q113: '2', q114: '3', q115: '3',
+        q116: '4', q117: '3', q118: '1', q119: '4', q120: '2', q121: '1', q122: '3', q123: '3', q124: '1', q125: '3',
+        q126: '1' // q127-q129 は元データに無し
+      };
     }
+
 
     // 「採点する」ボタンにイベントを登録 (正解データがあれば)
     if (Object.keys(correctAnswers).length > 0) {
