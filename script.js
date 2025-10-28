@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
         button.classList.add('active');
         const filter = button.getAttribute('data-filter');
         gridItems.forEach(item => {
-          // data-category 属性がない要素は常に表示 (または必要に応じて非表示)
           const category = item.getAttribute('data-category');
           if (filter === 'all' || !category || category === filter) {
             item.style.display = 'block';
@@ -27,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
   /* --- 2. クイズの個別採点機能 --- */
   const quizContainer = document.querySelector('.quiz-container');
 
-  if (quizContainer) { // クイズページかどうかを判定
+  if (quizContainer) {
 
     let correctAnswers = {};
     const pageTitleElement = document.querySelector('head title');
@@ -57,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (pageTitle.includes('センター試験 文法語法クイズ 1997')) {
       correctAnswers = { q1:'2', q2:'3', q3:'3', q4:'4', q5:'3', q6:'1', q7:'4', q8:'2', q9:'1', q10:'3', q11:'3', q12:'1', q13:'3', q14:'1' };
     } else if (pageTitle.includes('センター試験 文法語法クイズ 1998')) {
-      correctAnswers = { q1:'4', q2:'4', q3:'4', q4:'3', q5:'3', q6:'3', q7:'3', q8:'1', q9:'2', q10:'2', q11:'1', q12:'2', q13:'3', q14:'4' };
+      correctAnswers = { q1:'4', q2:'4', q3:'1', q4:'1', q5:'1', q6:'4', q7:'4', q8:'4', q9:'4', q10:'3' };
     } else if (pageTitle.includes('センター試験 文法語法クイズ 1999')) {
       correctAnswers = { q1:'3', q2:'1', q3:'2', q4:'4', q5:'1', q6:'4', q7:'4', q8:'4', q9:'3', q10:'1', q11:'4', q12:'3', q13:'1', q14:'4' };
     } else if (pageTitle.includes('センター試験 文法語法クイズ 2000')) {
@@ -72,16 +71,28 @@ document.addEventListener('DOMContentLoaded', function() {
       correctAnswers = { q1: '4', q2: '3', q3: '3', q4: '4', q5: '1', q6: '3', q7: '4', q8: '3', q9: '3', q10: '2' };
     } else if (pageTitle.includes('センター試験 文法語法クイズ 2005')) {
       correctAnswers = { q1: '1', q2: '3', q3: '1', q4: '3', q5: '1', q6: '2', q7: '3', q8: '2', q9: '2', q10: '4' };
-    } else if (pageTitle.includes('センター試験 文法語法クイズ 2006')) { // ★ New
-      correctAnswers = { // 2006 (q1-q10)
-        q1: '3', q2: '4', q3: '1', q4: '4', q5: '1', q6: '2', q7: '2', q8: '3', q9: '1', q10: '1'
+    } else if (pageTitle.includes('センター試験 文法語法クイズ 2006')) {
+      correctAnswers = { q1: '3', q2: '4', q3: '1', q4: '4', q5: '1', q6: '2', q7: '2', q8: '3', q9: '1', q10: '1' };
+    } else if (pageTitle.includes('センター試験 文法語法クイズ 2007')) {
+      correctAnswers = { q1: '4', q2: '2', q3: '4', q4: '4', q5: '4', q6: '1', q7: '4', q8: '3', q9: '1', q10: '2', q11: '1' };
+    } else if (pageTitle.includes('センター試験 文法語法クイズ 2008')) {
+      correctAnswers = { q1: '1', q2: '4', q3: '1', q4: '1', q5: '1', q6: '4', q7: '4', q8: '4', q9: '4', q10: '3' };
+    } else if (pageTitle.includes('センター試験 文法語法クイズ 2009')) {
+      correctAnswers = { q1: '4', q2: '2', q3: '1', q4: '1', q5: '3', q6: '1', q7: '3', q8: '1', q9: '2', q10: '3' };
+    } else if (pageTitle.includes('センター試験 文法語法クイズ 2010')) {
+      correctAnswers = { q1: '4', q2: '3', q3: '4', q4: '3', q5: '4', q6: '4', q7: '4', q8: '3', q9: '1', q10: '1' };
+    } else if (pageTitle.includes('センター試験 文法語法クイズ 2011')) {
+      correctAnswers = { q1: '1', q2: '3', q3: '1', q4: '1', q5: '2', q6: '1', q7: '2', q8: '4', q9: '3', q10: '2' };
+    } else if (pageTitle.includes('センター試験 文法語法クイズ 2012')) { // ★ New
+      correctAnswers = { // 2012 (q1-q10)
+        q1: '3', q2: '1', q3: '1', q4: '2', q5: '4', q6: '1', q7: '2', q8: '1', q9: '1', q10: '4'
       };
     }
     // ... Add other years here ...
 
 
     // Set up event listener for individual check buttons (event delegation)
-    if (Object.keys(correctAnswers).length > 0) { // Only if answers are loaded
+    if (Object.keys(correctAnswers).length > 0) {
          quizContainer.addEventListener('click', function(event) {
            if (event.target.classList.contains('check-single-answer-btn')) {
              const checkButton = event.target;
