@@ -33,12 +33,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const pageTitle = pageTitleElement ? pageTitleElement.innerText.trim() : '';
 
     // ページタイトルに基づいて正解データを読み込む
-    if (pageTitle.includes('哲学クイズ')) {
-      correctAnswers = { /* ... 哲学 ... */ };
+    // --- 勉強部屋 ---
+    if (pageTitle.includes('哲学クイズ (プラトン＆アリストテレス)')) { // タイトルをより厳密に変更
+      correctAnswers = {
+        q1: '3', q2: '3', q3: '4', q4: '3', q5: '1', q6: '2', q7: '2', q8: '4', q9: '1', q10: '1',
+        q11: '3', q12: '1', q13: '4', q14: '3', q15: '2', q16: '2', q17: '1', q18: '2', q19: '2', q20: '3'
+      };
+    } else if (pageTitle.includes('デカルト理解度確認クイズ')) { // ★ 新しく追加
+      correctAnswers = {
+        q1: '1', q2: '2', q3: '2', q4: '3', q5: '3', q6: '4', q7: '4', q8: '2', q9: '2', q10: '1',
+        q11: '2', q12: '3', q13: '1', q14: '3', q15: '2'
+      };
     } else if (pageTitle.includes('香港問題クイズ')) {
-      correctAnswers = { /* ... 香港 ... */ };
+      correctAnswers = {
+        q1: '3', q2: '2', q3: '3', q4: '4', q5: '2', q6: '3', q7: '3', q8: '3', q9: '2', q10: '2',
+        q11: '2', q12: '3', q13: '1', q14: '2', q15: '2'
+      };
     } else if (pageTitle.includes('ロヒンギャ問題クイズ')) {
-      correctAnswers = { /* ... ロヒンギャ ... */ };
+      correctAnswers = {
+        q1: '4', q2: '1', q3: '2', q4: '2', q5: '3', q6: '1', q7: '3', q8: '2', q9: '2', q10: '1',
+        q11: '3', q12: '2', q13: '2', q14: '1', q15: '2'
+      };
+    // --- 英語学習 (センター試験) ---
     } else if (pageTitle.includes('センター試験 文法語法クイズ 1990')) {
        correctAnswers = { q1:'2', q2:'3', q3:'2', q4:'1', q5:'3', q6:'2', q7:'3', q8:'2', q9:'1', q10:'1', q11:'1', q12:'2', q13:'1', q14:'2' };
     } else if (pageTitle.includes('センター試験 文法語法クイズ 1991')) {
@@ -83,15 +99,14 @@ document.addEventListener('DOMContentLoaded', function() {
       correctAnswers = { q1: '4', q2: '3', q3: '4', q4: '3', q5: '4', q6: '4', q7: '4', q8: '3', q9: '1', q10: '1' };
     } else if (pageTitle.includes('センター試験 文法語法クイズ 2011')) {
       correctAnswers = { q1: '1', q2: '3', q3: '1', q4: '1', q5: '2', q6: '1', q7: '2', q8: '4', q9: '3', q10: '2' };
-    } else if (pageTitle.includes('センター試験 文法語法クイズ 2012')) { // ★ New
-      correctAnswers = { // 2012 (q1-q10)
-        q1: '3', q2: '1', q3: '1', q4: '2', q5: '4', q6: '1', q7: '2', q8: '1', q9: '1', q10: '4'
-      };
+    } else if (pageTitle.includes('センター試験 文法語法クイズ 2012')) {
+      correctAnswers = { q1: '3', q2: '1', q3: '1', q4: '2', q5: '4', q6: '1', q7: '2', q8: '1', q9: '1', q10: '4' };
     }
-    // ... Add other years here ...
+
+    // ... 他の年度のクイズもここに追加していく ...
 
 
-    // Set up event listener for individual check buttons (event delegation)
+    // 個別チェックボタンのイベントリスナーを設定 (イベント委任)
     if (Object.keys(correctAnswers).length > 0) {
          quizContainer.addEventListener('click', function(event) {
            if (event.target.classList.contains('check-single-answer-btn')) {
