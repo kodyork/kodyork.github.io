@@ -44,6 +44,11 @@ document.addEventListener('DOMContentLoaded', function() {
         q1: '1', q2: '2', q3: '2', q4: '3', q5: '3', q6: '4', q7: '4', q8: '2', q9: '2', q10: '1',
         q11: '2', q12: '3', q13: '1', q14: '3', q15: '2'
       };
+    } else if (pageTitle.includes('カント哲学 理解度確認クイズ')) { // ★ 新しく追加
+      correctAnswers = {
+        q1: '2', q2: '3', q3: '4', q4: '1', q5: '1', q6: '3', q7: '3', q8: '1', q9: '1', q10: '3',
+        q11: '4', q12: '3', q13: '1', q14: '2', q15: '2'
+      };
     } else if (pageTitle.includes('香港問題クイズ')) {
       correctAnswers = {
         q1: '3', q2: '2', q3: '3', q4: '4', q5: '2', q6: '3', q7: '3', q8: '3', q9: '2', q10: '2',
@@ -114,10 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
       correctAnswers = { q1: '1', q2: '2', q3: '4', q4: '1', q5: '2', q6: '3', q7: '4', q8: '1', q9: '3', q10: '1' };
     } else if (pageTitle.includes('センター試験 文法語法クイズ 2018')) {
       correctAnswers = { q1: '3', q2: '2', q3: '1', q4: '4', q5: '1', q6: '3', q7: '1', q8: '3', q9: '3', q10: '3' };
-    } else if (pageTitle.includes('センター試験 文法語法クイズ 2019')) { // ★ New (Final)
-      correctAnswers = { // 2019 (q1-q10)
-        q1: '2', q2: '3', q3: '1', q4: '2', q5: '4', q6: '3', q7: '3', q8: '2', q9: '4', q10: '4'
-      };
+    } else if (pageTitle.includes('センター試験 文法語法クイズ 2019')) {
+      correctAnswers = { q1: '2', q2: '3', q3: '1', q4: '2', q5: '4', q6: '3', q7: '3', q8: '2', q9: '4', q10: '4' };
     }
 
 
